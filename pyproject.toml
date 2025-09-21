@@ -13,4 +13,7 @@ dependencies = [
 [dependency-groups]
 nbook = [
     "marimo[recommended]>=0.16.0",
+    "plotnine[extra]>=0.13.6",
+    "polars[cloudpickle,plot,pydantic]>=1.33.1",
+    "pydantic[email,timezone]>=2.11.9",
 ]

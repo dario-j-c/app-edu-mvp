@@ -1,1 +1,4 @@
 marimo[recommended]
+plotnine[extra]
+polars[cloudpickle,plot,pydantic]
+pydantic[email,timezone]
