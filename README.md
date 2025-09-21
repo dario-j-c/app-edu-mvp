@@ -1,25 +1,38 @@
-# 📦 Streamlit App Starter Kit 
-```
-⬆️ (Replace above with your app's name)
-```
+# Streamlit & Marimo MVP Dashboard Kit
 
-Description of the app ...
+A starter kit for quickly mocking up simple dashboard applications.
 
-## Demo App
+This project provides a fully containerized development environment that includes both [Streamlit](https://streamlit.io/) for building data apps and [Marimo](https://marimo.io/) for reactive, notebook-based development.
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://app-starter-kit.streamlit.app/)
+## Development Environment
 
-## GitHub Codespaces
+This repository is configured with a **VS Code Development Container**, which creates a consistent and reproducible environment for all users.
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/app-starter-kit?quickstart=1)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/dario-j-c/app-edu-mvp?quickstart=1)
 
-## Section Heading
+*Note: If you use this repository as a template, remember to update the URL in the README to point to your own repository.*
 
-This is filler text, please replace this with text for this section.
+### Getting Started
 
-## Further Reading
+1.  Open this repository in a VS Code Dev Container or GitHub Codespaces.
+2.  The container will automatically build, install all system and Python dependencies, and start the development servers.
+3.  Once attached, you can access the services on the following forwarded ports:
+    *   **Streamlit:** `http://localhost:8501`
+    *   **Marimo:** `http://localhost:2718`
 
-This is filler text, please replace this with a explanatory text about further relevant resources for this repo
-- Resource 1
-- Resource 2
-- Resource 3
+### ⚠️ Authentication Notice
+
+For convenience within the isolated development environment, authentication and some security features have been disabled by default:
+
+*   **Streamlit:** Started with `--server.enableCORS false` and `--server.enableXsrfProtection false`.
+*   **Marimo:** Started with the `--no-token` flag.
+
+This configuration is **for development only**. If you deploy this application to a public server, you must remove these flags and configure a proper authentication method.
+
+## Project Goal & Flexibility
+
+The primary goal of this kit is to provide a quick starting point for building simple dashboard mockups with Streamlit.
+
+However, the environment is flexible. You are encouraged to:
+*   **Extend it** for your own more complex applications.
+*   **Explore Marimo** as an alternative for building your app. The reactive, notebook-style interface of Marimo may be a better fit for your project.
