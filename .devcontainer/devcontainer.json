@@ -1,6 +1,10 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.209.6/containers/python-3
+// Description: A development environment for the Streamlit & Marimo starter kit.
+// Documentation: https://github.com/dario-j-c/app-edu-mvp
 {
+  "name": "app-edu-mvp-dev",
+  "shutdownAction": "stopContainer",
     "image": "mcr.microsoft.com/devcontainers/python:3.9-bullseye",
     "customizations": {
         "codespaces": {

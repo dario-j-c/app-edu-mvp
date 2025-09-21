@@ -20,6 +20,16 @@ This repository is configured with a **VS Code Development Container**, which cr
     *   **Streamlit:** `http://localhost:8501`
     *   **Marimo:** `http://localhost:2718`
 
+### Environment Details
+
+
+This dev container is configured with the following helpful properties in the `.devcontainer/devcontainer.json` file:
+
+*   **Container Name:** The Docker container is named `app-edu-mvp-dev`. You can change this by editing the `name` property.
+*   **Automatic Shutdown:** To save system resources, the container will automatically stop when you close VS Code. This is controlled by the `shutdownAction` property. You can set it to `"none"` if you prefer to manage the container's lifecycle manually.
+
+Additional information such as a description and documentation URL are included as comments in the `devcontainer.json` for maintainers' reference.
+
 ### ⚠️ Authentication Notice
 
 For convenience within the isolated development environment, authentication and some security features have been disabled by default:
