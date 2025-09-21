@@ -2,7 +2,6 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.209.6/containers/python-3
 {
     "image": "mcr.microsoft.com/devcontainers/python:3.9-bullseye",
-    "onCreateCommand": "sudo apt-get update && sudo apt-get -y install gfortran libopenblas-dev",
     "customizations": {
         "codespaces": {
           "openFiles": [
@@ -28,13 +27,9 @@
         2718
     ],
     // Use 'postCreateCommand' to run commands after the container is created.
-    // Install app dependencies.
-    "postCreateCommand": "sudo pip install uv && sudo uv pip install --system -r req_files/requirements.txt -r req_files/requirements.nbook.txt",
+    "postCreateCommand": "bash scripts/install.sh",
     // Use 'postAttachCommand' to run commands after a tool has attached to the container.
-    // Start the app.
-    "postAttachCommand": {
-        "server": "streamlit run streamlit_app.py --server.enableCORS false --server.enableXsrfProtection false"
-    },
+    "postAttachCommand": "bash scripts/start.sh",
     "portsAttributes": {
         "8501": {
             "label": "Streamlit",
