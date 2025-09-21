@@ -1,29 +1,35 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.209.6/containers/python-3
 {
-    "image": "mcr.microsoft.com/devcontainers/python:3.11-bullseye",
+    "image": "mcr.microsoft.com/devcontainers/python:3.9-bullseye",
+    "onCreateCommand": "sudo apt-get update && sudo apt-get -y install gfortran libopenblas-dev",
     "customizations": {
         "codespaces": {
           "openFiles": [
             "README.md",
             "streamlit_app.py"
-          ]
+          ],
+          "image": "mcr.microsoft.com/devcontainers/python:3.12-bullseye"
         },
         "vscode": {
-          "settings": {},
+          "settings": {
+            "python.defaultInterpreterPath": "/usr/local/bin/python"
+          },
           "extensions": [
             "ms-python.python",
-            "ms-python.vscode-pylance"
+            "ms-python.vscode-pylance",
+            "charliermarsh.ruff"
           ]
         }
       },
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     "forwardPorts": [
-        8501
+        8501,
+        2718
     ],
     // Use 'postCreateCommand' to run commands after the container is created.
     // Install app dependencies.
-    "postCreateCommand": "pip3 install --user -r requirements.txt",
+    "postCreateCommand": "sudo pip install uv && sudo uv pip install --system -r req_files/requirements.txt -r req_files/requirements.nbook.txt",
     // Use 'postAttachCommand' to run commands after a tool has attached to the container.
     // Start the app.
     "postAttachCommand": {
@@ -31,7 +37,11 @@
     },
     "portsAttributes": {
         "8501": {
-            "label": "Application",
+            "label": "Streamlit",
+            "onAutoForward": "openPreview"
+        },
+        "2718": {
+            "label": "Marimo",
             "onAutoForward": "openPreview"
         }
     },
