@@ -4,7 +4,7 @@ set -e
 echo "Starting services in the background..."
 
 # Start Streamlit app
-streamlit run streamlit_app.py --server.enableCORS false --server.enableXsrfProtection false &
+streamlit run nbook/streamlit/streamlit_app.py --server.enableCORS false --server.enableXsrfProtection false &
 echo "  - Streamlit server starting."
 
 # Start Marimo file browser without authentication

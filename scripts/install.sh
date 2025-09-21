@@ -10,6 +10,7 @@ sudo apt-get -y install gfortran libopenblas-dev
 
 # 2. Install uv system-wide
 echo "Installing uv..."
+sudo pip install --upgrade pip
 sudo pip install uv
 
 # 3. Use uv to install project dependencies from requirements files

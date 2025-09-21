@@ -6,7 +6,8 @@
         "codespaces": {
           "openFiles": [
             "README.md",
-            "streamlit_app.py"
+            "nbook/streamlit/streamlit_app.py",
+            "nbook/marimo/marimo_nbook.py"
           ],
           "image": "mcr.microsoft.com/devcontainers/python:3.12-bullseye"
         },
